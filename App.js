@@ -3,125 +3,77 @@ import {
   StyleSheet,
   Text,
   View,
+  SafeAreaView,
   TextInput,
   TouchableOpacity,
   StatusBar,
+  Animatable,
 } from 'react-native';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar backgroundColor="#009387" barStyle="light-content" />
+        <StatusBar backgroundColor='#34A853' barStyle="light-content" />
         <View style={styles.header}>
           <Text style={styles.text_header}>Login Screen </Text>
         </View>
         <View
-          style={[
-            styles.footer,
-            {
-              backgroundColor: '#fff',
-            },
-          ]}>
-          <Text
-            style={[
-              styles.text_footer,
-              {
-                color: '#333',
-              },
-            ]}>
-            Username
-          </Text>
+          style={[styles.footer, {
+            backgroundColor: '#fff'
+          }]}>
+          <Text style={[styles.text_footer, {
+            color: '#333'
+          }]}>Username</Text>
           <View style={styles.action}>
             <TextInput
               placeholder="Enter Username"
               placeholderTextColor="#666666"
-              style={[
-                styles.textInput,
-                {
-                  color: '#333',
-                },
-              ]}
-              autoCapitalize="none"
-            />
+              style={[styles.textInput, {
+                color: '#333'
+              }]} autoCapitalize="none" />
           </View>
-          <Text
-            style={[
-              styles.text_footer,
-              {
-                color: '#333',
-                marginTop: 35,
-              },
-            ]}>
-            Password
-          </Text>
+          <Text style={[styles.text_footer, {
+            color: '#333',
+            marginTop: 35
+          }]}>Password</Text>
           <View style={styles.action}>
             <TextInput
               placeholder="Enter Password"
               placeholderTextColor="#666666"
               secureTextEntry={true}
-              style={[
-                styles.textInput,
-                {
-                  color: '#333',
-                },
-              ]}
-              autoCapitalize="none"
-            />
+              style={[styles.textInput, {
+                color: '#333'
+              }]} autoCapitalize="none" />
           </View>
           <TouchableOpacity>
-            <Text style={{ color: '#009387', marginTop: 15 }}>
-              Forgot password?
-            </Text>
+            <Text style={{ color: '#34A853', marginTop: 15 }}>Forgot password?</Text>
           </TouchableOpacity>
           <View style={styles.button}>
             <TouchableOpacity style={styles.signIn}>
-              <Text
-                style={[
-                  styles.textSign,
-                  {
-                    color: '#fff',
-                  },
-                ]}>
-                Sign In
-              </Text>
+              <Text style={[styles.textSign, {
+                color: '#fff'
+              }]}>Sign In</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={[
-                styles.signIn,
-                {
-                  borderColor: '#009387',
-                  borderWidth: 1,
-                },
-              ]}>
-              <Text
-                style={[
-                  styles.textSign,
-                  {
-                    color: '#009387',
-                  },
-                ]}>
-                Sign In
-              </Text>
+              style={[styles.signIn, {
+                borderColor: '#34A853',
+                borderWidth: 1,
+              }]}>
+              <Text style={[styles.textSign, {
+                color: '#34A853'
+              }]}>Sign In</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={[
-                styles.signIn,
-                {
-                  borderColor: '#009387',
-                  borderWidth: 1,
-                  marginTop: 15,
-                },
-              ]}>
-              <Text
-                style={[
-                  styles.textSign,
-                  {
-                    color: '#009387',
-                  },
-                ]}>
-                Sign Up
-              </Text>
+              style={[styles.signIn, {
+                borderColor: '#34A853',
+                borderWidth: 1,
+                marginTop: 15
+              }]}
+            >
+              <Text style={[styles.textSign, {
+                color: '#34A853'
+              }]}>Sign Up</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -132,13 +84,13 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#009387',
+    backgroundColor: '#34A853'
   },
   header: {
     flex: 1,
     justifyContent: 'flex-end',
     paddingHorizontal: 20,
-    paddingBottom: 50,
+    paddingBottom: 50
   },
   footer: {
     flex: 3,
@@ -146,12 +98,12 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     paddingHorizontal: 20,
-    paddingVertical: 30,
+    paddingVertical: 30
   },
   text_header: {
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 30,
+    fontSize: 30
   },
   text_footer: {
     color: '#05375a',
@@ -164,7 +116,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#f2f2f2',
-    paddingBottom: 5,
+    paddingBottom: 5
   },
   textInput: {
     flex: 1,
@@ -177,7 +129,7 @@ const styles = StyleSheet.create({
   },
   button: {
     alignItems: 'center',
-    margin: 'auto',
+    margin: 'auto'
   },
   signIn: {
     width: '100%',
@@ -188,6 +140,15 @@ const styles = StyleSheet.create({
   },
   textSign: {
     fontSize: 18,
-    fontWeight: 'bold',
-  },
+    fontWeight: 'bold'
+  }
 });
+
+
+
+
+
+
+
+
+
